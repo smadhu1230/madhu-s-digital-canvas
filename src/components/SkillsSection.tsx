@@ -13,11 +13,11 @@ const skills = {
     { name: "Java", icon: <Code size={24} />, level: 70 },
   ],
   tools: [
+    { name: "GitHub", icon: <GitBranch size={24} /> },
     { name: "Figma", icon: <Figma size={24} /> },
     { name: "Photoshop", icon: <Figma size={24} /> },
     { name: "Canva", icon: <Figma size={24} /> },
-    { name: "Git & GitHub", icon: <GitBranch size={24} /> },
-    { name: "VS Code", icon: <Code size={24} /> },
+    { name: "Microsoft Office", icon: <Code size={24} /> },
     { name: "MySQL", icon: <Database size={24} /> },
   ],
   soft: [

@@ -20,31 +20,38 @@ const HeroSection = () => {
                 Welcome to my portfolio
               </p>
               <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 leading-tight">
-                Hi,
+                Hi, I'm
                 <br />
-                I'm <span className="text-primary">Madhumitha</span>
+                <span className="text-primary">MADHUMITHA S</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-                Frontend Developer | Graphic Designer | ECE Undergraduate
+                Software Developer
               </p>
             </div>
 
             <div className="animate-fade-up animation-delay-200">
+              <p className="text-foreground/90 max-w-lg mb-3 leading-relaxed font-medium">
+                Building scalable, user-focused digital experiences with clean code and creative design.
+              </p>
               <p className="text-muted-foreground max-w-lg mb-8 leading-relaxed">
-                A passionate Electronics and Communication Engineering student with a love for emerging technologies, 
-                creative design, and building user-friendly digital experiences. I blend technical skills with 
-                artistic vision to create impactful web solutions.
+                Passionate about software development and creating impactful digital solutions that
+                blend problem-solving with creativity.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up animation-delay-400">
-              <Button size="lg" className="group glow-primary">
-                View Portfolio
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+              <Button size="lg" className="group glow-primary" asChild>
+                <a href="#projects">
+                  View Projects
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="border-muted-foreground/30 hover:border-primary">
                 <Download className="mr-2" size={18} />
                 Download CV
+              </Button>
+              <Button size="lg" variant="outline" className="border-muted-foreground/30 hover:border-secondary" asChild>
+                <a href="#contact">Contact Me</a>
               </Button>
             </div>
 

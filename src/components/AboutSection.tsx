@@ -17,26 +17,25 @@ const AboutSection = () => {
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              I'm <span className="text-foreground font-medium">Madhumitha Saravanan</span>, 
-              an Electronics and Communication Engineering undergraduate at 
-              <span className="text-primary"> Panimalar Engineering College, Chennai</span>, 
-              with an expected graduation in <span className="text-secondary">2027</span>.
+              <span className="text-foreground font-medium">Madhumitha Saravanan</span> is an
+              Electronics and Communication Engineering undergraduate at
+              <span className="text-primary"> Panimalar Engineering College, Chennai</span>
+              <span className="text-secondary"> (2023–2027)</span>.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My journey in tech is fueled by a deep passion for emerging technologies and 
-              a creative eye for design. I thrive in collaborative environments where I can 
-              combine my technical knowledge with artistic vision to build meaningful digital experiences.
+              She is passionate about software development and the IT field, with a strong focus on
+              building intuitive and real-world applications. She combines problem-solving skills with
+              a creative mindset to design user-friendly digital experiences.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Beyond coding and design, I believe in continuous learning, adaptability, and taking 
-              initiative. When I'm not working on projects, you'll find me exploring new music 
-              or discovering the latest trends in technology.
+              A continuous learner who actively explores new technologies and thrives in collaborative
+              environments.
             </p>
 
             {/* Quick facts */}
             <div className="grid grid-cols-2 gap-4 pt-6">
               <QuickFact icon={<GraduationCap size={20} />} label="ECE Student" value="Class of 2027" />
-              <QuickFact icon={<Sparkles size={20} />} label="Focus" value="Frontend & Design" />
+              <QuickFact icon={<Sparkles size={20} />} label="Focus" value="Software Development" />
               <QuickFact icon={<Music size={20} />} label="Hobby" value="Music Enthusiast" />
               <QuickFact icon={<Sparkles size={20} />} label="Location" value="Chennai, India" />
             </div>

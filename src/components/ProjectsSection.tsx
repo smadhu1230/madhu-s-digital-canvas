@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
@@ -6,23 +6,41 @@ const projects = [
     id: 1,
     title: "Live Music Web Application",
     description:
-      "A full-featured music streaming platform with secure user authentication, media uploads via Cloudinary, and admin content management capabilities.",
-    image: "/placeholder.svg",
+      "Music streaming platform with secure authentication, media uploads via Cloudinary, and admin dashboard. Improved performance by 30% through optimization.",
+    image: "",
     tags: ["React", "Firebase", "Tailwind CSS", "Cloudinary"],
     liveUrl: "#",
     githubUrl: "#",
-    featured: true,
   },
   {
     id: 2,
     title: "Movie Ticket Booking System",
     description:
-      "An interactive web application allowing users to browse movies, select showtimes, choose seats, and complete ticket bookings seamlessly.",
-    image: "/placeholder.svg",
+      "Interactive web app for browsing movies, selecting showtimes, choosing seats, and booking tickets. Implemented validation to reduce booking errors.",
+    image: "",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
     githubUrl: "#",
-    featured: true,
+  },
+  {
+    id: 3,
+    title: "Soil Moisture Sensor System",
+    description:
+      "IoT-based system to monitor soil moisture levels in real-time and enable smart irrigation for sustainable agriculture.",
+    image: "",
+    tags: ["IoT", "Arduino", "Sensors", "Embedded"],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 4,
+    title: "Secure Image Encryption Research",
+    description:
+      "Published research on secure image encryption using computational ghost imaging and compressed sensing techniques.",
+    image: "",
+    tags: ["Research", "Cryptography", "Image Processing"],
+    liveUrl: "#",
+    githubUrl: "#",
   },
 ];
 
@@ -38,7 +56,7 @@ const ProjectsSection = () => {
             My <span className="text-primary">Projects</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            A showcase of projects that demonstrate my skills in frontend development and creative problem-solving.
+            Real-world projects that demonstrate my skills in software development, IoT, and research.
           </p>
         </div>
 
@@ -54,15 +72,20 @@ const ProjectsSection = () => {
 
 const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
   <div className="group bg-card border border-border rounded-2xl overflow-hidden card-glow">
-    {/* Project Image */}
-    <div className="relative h-48 bg-muted overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-4xl font-display font-bold text-muted-foreground/30">
-          {project.title.charAt(0)}
-        </span>
-      </div>
-      
+    {/* Project Image Placeholder */}
+    <div className="relative h-52 bg-muted overflow-hidden">
+      {project.image ? (
+        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/60">
+            <ImageIcon size={40} className="mb-2" />
+            <span className="text-xs uppercase tracking-wider">Project Image</span>
+          </div>
+        </>
+      )}
+
       {/* Overlay on hover */}
       <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
         <Button size="sm" variant="outline" asChild>
@@ -80,16 +103,13 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
       </div>
     </div>
 
-    {/* Project Info */}
     <div className="p-6">
       <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-primary transition-colors">
         {project.title}
       </h3>
-      <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+      <p className="text-muted-foreground text-sm mb-4">
         {project.description}
       </p>
-      
-      {/* Tags */}
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <span
