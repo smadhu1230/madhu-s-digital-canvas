@@ -1,22 +1,5 @@
-import { Award, Crown, Users, Calendar, Star, Heart, Sparkles } from "lucide-react";
+import { Award, Crown, Users, Calendar, Star, Heart, Sparkles, ImageIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
-const scholarships = [
-  {
-    id: 1,
-    title: "Richard E. Merwin Scholarship",
-    amount: "USD 1000",
-    organization: "IEEE Computer Society",
-    icon: <Award size={24} />,
-  },
-  {
-    id: 2,
-    title: "ISF Best Student Volunteer Award 2025",
-    amount: "",
-    organization: "IETE Students Forum",
-    icon: <Star size={24} />,
-  },
-];
 
 const leadershipRoles = [
   {
@@ -24,7 +7,6 @@ const leadershipRoles = [
     role: "Chairperson",
     organization: "IEEE Electron Devices Society",
     chapter: "Panimalar SB Chapter",
-    period: "Dec 2025 – Present",
     current: true,
   },
   {
@@ -32,155 +14,70 @@ const leadershipRoles = [
     role: "Chairperson",
     organization: "IEEE Education Society",
     chapter: "Panimalar SB Chapter",
-    period: "Mar 2025 – Present",
     current: true,
   },
   {
     id: 3,
-    role: "Active IEEE Volunteer",
-    organization: "IEEE",
-    chapter: "",
-    period: "Ongoing",
+    role: "Vice Chair",
+    organization: "IEEE Electronics Packaging Society",
+    chapter: "Panimalar SB Chapter",
+    current: true,
+  },
+  {
+    id: 4,
+    role: "Treasurer",
+    organization: "IEEE Society on Social Implications of Technology",
+    chapter: "Panimalar SB Chapter",
     current: true,
   },
 ];
 
+// Highlighted volunteering with image placeholders
+const featuredVolunteering = [
+  { id: 1, title: "IEEE Returning Mothers Conference 2025" },
+  { id: 2, title: "Design Team Co-Lead — Connecting the Dots 4.0" },
+  { id: 3, title: "Coordinator — SDGthon 2K26 (24-hour Hackathon)" },
+  { id: 4, title: "IEEEXtreme 19.0 Ambassador" },
+  { id: 5, title: "IEEE Day 2025 Ambassador" },
+  { id: 6, title: "AI-Based Video Analytics Lecture by Dr. Supavadee Aramvith" },
+];
+
 const volunteeringActivities = [
-  {
-    id: 1,
-    role: "Special Track – Design Team Lead",
-    event: "IEEE YESIST12",
-    period: "Dec 2025 – Present",
-    year: 2026,
-  },
-  {
-    id: 2,
-    role: "Volunteer",
-    event: "IEEE Madras Section",
-    period: "Jul 2025 – Present",
-    year: 2025,
-  },
-  {
-    id: 3,
-    role: "Graphic Designer",
-    event: "IEEE WIE Madras Section AG",
-    period: "Mar 2025 – Present",
-    year: 2025,
-  },
-  {
-    id: 4,
-    role: "Co-Lead, Design Team",
-    event: "Connecting the Dots 4.0",
-    period: "Sep 2025 – Oct 2025",
-    year: 2025,
-  },
-  {
-    id: 5,
-    role: "Design Member",
-    event: "IDEATHON & PITCHFEST Track 2025",
-    period: "2025",
-    year: 2025,
-  },
-  {
-    id: 6,
-    role: "Volunteer",
-    event: "IEEE Returning Mothers Conference 2025",
-    period: "Jun 2025 – Nov 2025",
-    year: 2025,
-  },
-  {
-    id: 7,
-    role: "IEEE Day Ambassador",
-    event: "Panimalar Engineering College",
-    period: "Jul 2025 – Oct 2025",
-    year: 2025,
-  },
-  {
-    id: 8,
-    role: "IEEEXTREME 19.0 Ambassador",
-    event: "Panimalar Engineering College",
-    period: "Jun 2025 – Oct 2025",
-    year: 2025,
-  },
-  {
-    id: 9,
-    role: "Volunteer",
-    event: "Techdivathon – 24 Hours Hackathon",
-    period: "2025",
-    year: 2025,
-  },
-  {
-    id: 10,
-    role: "IETE Volunteer",
-    event: "IETE Students Forum",
-    period: "Ongoing",
-    year: 2025,
-  },
+  { id: 1, role: "Internship Trainee", event: "Ashok Leyland", period: "Industry Exposure" },
+  { id: 2, role: "Volunteer", event: "INSPIRE 2.0 (IEEE SPAx)", period: "Aug 2025" },
+  { id: 3, role: "Graphic Designer", event: "IEEE MOVE India", period: "2025" },
+  { id: 4, role: "Publicity Ambassador", event: "IEEE YESIST12 2025", period: "2025" },
+  { id: 5, role: "Coordinator", event: "SheLEADS STEM Initiative (500+ students)", period: "2025" },
+  { id: 6, role: "Co-Lead, Design Team", event: "Connecting the Dots 4.0", period: "Sep – Oct 2025" },
+  { id: 7, role: "Design Member", event: "IDEATHON & PITCHFEST", period: "2025" },
+  { id: 8, role: "IEEE Day Ambassador", event: "Panimalar Engineering College", period: "Jul – Oct 2025" },
+  { id: 9, role: "IEEEXTREME 19.0 Ambassador", event: "Panimalar Engineering College", period: "Jun – Oct 2025" },
+  { id: 10, role: "Volunteer", event: "IEEE Madras Section", period: "Jul 2025 – Present" },
+  { id: 11, role: "Special Track Design Lead", event: "IEEE YESIST12 2026", period: "Dec 2025 – Present" },
+  { id: 12, role: "Coordinator", event: "SDGthon 2K26 — 24-hour SDG Hackathon", period: "2026" },
+  { id: 13, role: "Volunteer", event: "AI-Based Video Analytics Lecture (Dr. Supavadee Aramvith, Chair IEEE Thailand)", period: "2025" },
 ];
 
 const VolunteeringSection = () => {
   return (
     <section id="volunteering" className="py-24 relative overflow-hidden">
-      {/* Background decorations */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
           <p className="text-secondary font-medium mb-2 tracking-wider uppercase text-sm">
             Making an Impact
           </p>
           <h2 className="section-title">
-            Volunteering & <span className="text-primary">Leadership</span>
+            Leadership & <span className="text-primary">Volunteering</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            Dedicated to community service, technical education, and empowering the next generation through IEEE and beyond.
+            Demonstrating leadership and community impact through IEEE roles and initiatives.
           </p>
         </div>
 
-        {/* Scholarships & Awards */}
-        <div className="mb-20">
-          <div className="flex items-center gap-3 mb-8 justify-center">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Award className="text-primary" size={24} />
-            </div>
-            <h3 className="text-2xl font-display font-semibold">Scholarships & Awards</h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {scholarships.map((award) => (
-              <div
-                key={award.id}
-                className="group relative bg-gradient-to-br from-card via-card to-primary/5 border border-border rounded-2xl p-6 card-glow hover:border-primary/50 transition-all overflow-hidden"
-              >
-                {/* Glow effect */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
-                
-                <div className="relative flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl text-primary group-hover:scale-110 transition-transform">
-                    {award.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className="text-lg font-semibold">{award.title}</h4>
-                      {award.amount && (
-                        <Badge variant="secondary" className="bg-secondary/20 text-secondary border-secondary/30">
-                          {award.amount}
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-muted-foreground text-sm flex items-center gap-1">
-                      <Sparkles size={14} className="text-secondary" />
-                      {award.organization}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* IEEE Leadership Roles */}
+        {/* Leadership Roles */}
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8 justify-center">
             <div className="p-2 bg-secondary/10 rounded-lg">
@@ -188,8 +85,8 @@ const VolunteeringSection = () => {
             </div>
             <h3 className="text-2xl font-display font-semibold">IEEE Leadership Roles</h3>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {leadershipRoles.map((role) => (
               <div
                 key={role.id}
@@ -202,39 +99,65 @@ const VolunteeringSection = () => {
                     </Badge>
                   </div>
                 )}
-                
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Crown size={28} className="text-secondary" />
+
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Crown size={24} className="text-secondary" />
                 </div>
-                
-                <h4 className="text-xl font-semibold text-gradient mb-2">{role.role}</h4>
+
+                <h4 className="text-lg font-semibold text-gradient mb-2">{role.role}</h4>
                 <p className="text-foreground font-medium text-sm mb-1">{role.organization}</p>
-                {role.chapter && (
-                  <p className="text-muted-foreground text-xs mb-3">{role.chapter}</p>
-                )}
-                <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground">
-                  <Calendar size={12} />
-                  <span>{role.period}</span>
+                <p className="text-muted-foreground text-xs">{role.chapter}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Featured Volunteering with Image Placeholders */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-8 justify-center">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Star className="text-primary" size={24} />
+            </div>
+            <h3 className="text-2xl font-display font-semibold">Featured Initiatives</h3>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuredVolunteering.map((item) => (
+              <div
+                key={item.id}
+                className="group bg-card border border-border rounded-2xl overflow-hidden card-glow hover:border-primary/50 transition-all"
+              >
+                <div className="relative h-44 bg-muted overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/15 to-secondary/15" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/60">
+                    <ImageIcon size={32} className="mb-1" />
+                    <span className="text-xs uppercase tracking-wider">Event Image</span>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <div className="flex items-start gap-2">
+                    <Heart size={16} className="text-primary mt-1 shrink-0" />
+                    <h4 className="font-semibold leading-snug">{item.title}</h4>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* IEEE & Technical Volunteering */}
+        {/* All Volunteering Timeline */}
         <div>
           <div className="flex items-center gap-3 mb-8 justify-center">
             <div className="p-2 bg-primary/10 rounded-lg">
               <Users className="text-primary" size={24} />
             </div>
-            <h3 className="text-2xl font-display font-semibold">IEEE & Technical Volunteering</h3>
+            <h3 className="text-2xl font-display font-semibold">All Volunteering Activities</h3>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
               <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary/30 transform md:-translate-x-1/2" />
-              
+
               {volunteeringActivities.map((activity, index) => (
                 <div
                   key={activity.id}
@@ -242,10 +165,8 @@ const VolunteeringSection = () => {
                     index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-auto"
                   }`}
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-4 md:left-1/2 top-2 w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary border-2 border-background transform -translate-x-1/2 z-10 animate-pulse-glow" />
-                  
-                  {/* Content card */}
+
                   <div
                     className={`ml-12 md:ml-0 ${
                       index % 2 === 0 ? "md:mr-10" : "md:ml-10"
@@ -253,10 +174,10 @@ const VolunteeringSection = () => {
                   >
                     <div className="group bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 hover:border-primary/30 transition-all hover:bg-card">
                       <div className={`flex items-center gap-2 mb-1 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                        <Heart size={14} className="text-primary" />
+                        <Calendar size={12} className="text-secondary" />
                         <span className="text-xs text-secondary font-medium">{activity.period}</span>
                       </div>
-                      
+
                       <h4 className={`font-semibold text-foreground mb-1 ${index % 2 === 0 ? "md:text-right" : ""}`}>
                         {activity.role}
                       </h4>
@@ -274,10 +195,10 @@ const VolunteeringSection = () => {
         {/* Impact Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { number: "2", label: "Leadership Roles", icon: <Crown size={20} /> },
-            { number: "10+", label: "Volunteer Activities", icon: <Heart size={20} /> },
-            { number: "2", label: "Awards & Scholarships", icon: <Award size={20} /> },
-            { number: "3+", label: "Design Contributions", icon: <Sparkles size={20} /> },
+            { number: "4", label: "Leadership Roles", icon: <Crown size={20} /> },
+            { number: "13+", label: "Volunteer Activities", icon: <Heart size={20} /> },
+            { number: "5", label: "Awards & Scholarships", icon: <Award size={20} /> },
+            { number: "500+", label: "Students Impacted", icon: <Sparkles size={20} /> },
           ].map((stat, index) => (
             <div
               key={index}
