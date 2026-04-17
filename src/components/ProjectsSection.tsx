@@ -1,9 +1,9 @@
 import { ExternalLink, Github, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import liveMusicImage from "@/assets/live-music.jpg";
-import soilMoistureImage from "@/assets/project-soil-moisture.png";
+import soilMoistureImage from "@/assets/soil-moisture1.jpg";
 import movieticket from "@/assets/Movie-ticket.png";
-import secureimage from "@/assets/ "
+import secureimage from "@/assets/Secure Image Encryption Research.jpg"
 
 const projects = [
   {
