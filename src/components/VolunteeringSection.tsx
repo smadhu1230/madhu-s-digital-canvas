@@ -43,7 +43,7 @@ const featuredVolunteering = [
 ];
 
 const volunteeringActivities = [
-  { id: 1, role: "Internship Trainee", event: "Ashok Leyland", period: "Industry Exposure" },
+  
   { id: 2, role: "Volunteer", event: "INSPIRE 2.0 (IEEE SPAx)", period: "Aug 2025" },
   { id: 3, role: "Graphic Designer", event: "IEEE MOVE India", period: "2025" },
   { id: 4, role: "Publicity Ambassador", event: "IEEE YESIST12 2025", period: "2025" },
