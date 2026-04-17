@@ -14,26 +14,26 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: <Linkedin size={20} />,
-    href: "https://linkedin.com",
-    label: "linkedin.com/in/madhumitha",
+    href: "https://www.linkedin.com/in/madhumitha-s-18f/",
+    label: "linkedin.com/in/madhumitha-s-18f",
   },
   {
     name: "GitHub",
     icon: <Github size={20} />,
-    href: "https://github.com",
-    label: "github.com/madhumitha",
+    href: "https://github.com/smadhu1230",
+    label: "github.com/smadhu1230",
   },
   {
     name: "HackerRank",
     icon: <Code size={20} />,
-    href: "https://hackerrank.com",
-    label: "hackerrank.com/madhumitha",
+    href: "https://www.hackerrank.com/profile/12282madhu",
+    label: "hackerrank.com/12282madhu",
   },
   {
     name: "LeetCode",
     icon: <ExternalLink size={20} />,
-    href: "https://leetcode.com",
-    label: "leetcode.com/madhumitha",
+    href: "https://leetcode.com/u/o9F2OPfHYH/",
+    label: "leetcode.com/u/o9F2OPfHYH",
   },
 ];
 
