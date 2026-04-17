@@ -1,7 +1,9 @@
 import { ExternalLink, Github, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import liveMusicImage from "@/assets/project-live-music.png";
+import liveMusicImage from "@/assets/live-music.jpg";
 import soilMoistureImage from "@/assets/project-soil-moisture.png";
+import movieticket from "@/assets/Movie-ticket.png";
+import secureimage from "@/assets/ "
 
 const projects = [
   {
@@ -19,7 +21,7 @@ const projects = [
     title: "Movie Ticket Booking System",
     description:
       "Interactive web app for browsing movies, selecting showtimes, choosing seats, and booking tickets. Implemented validation to reduce booking errors.",
-    image: "",
+    image: movieticket,
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
     githubUrl: "#",
@@ -39,7 +41,7 @@ const projects = [
     title: "Secure Image Encryption Research",
     description:
       "Published research on secure image encryption using computational ghost imaging and compressed sensing techniques.",
-    image: "",
+    image: secureimage,
     tags: ["Research", "Cryptography", "Image Processing"],
     liveUrl: "#",
     githubUrl: "#",
