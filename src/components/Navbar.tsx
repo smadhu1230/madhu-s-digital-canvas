@@ -7,8 +7,11 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Services", href: "#services" },
-  { name: "Volunteering", href: "#volunteering" },
+  { name: "Certifications", href: "#certifications" },
+  { name: "Hackathons", href: "#hackathons" },
+  { name: "Achievements", href: "#achievements" },
+  { name: "Leadership", href: "#volunteering" },
+  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -19,15 +22,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <span className="text-2xl font-display font-bold">
               Madhu<span className="text-primary">.</span>
             </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="nav-link text-sm font-medium">
                 {link.name}
@@ -35,8 +36,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Social Links */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <a
               href="mailto:12282madhu@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -45,7 +45,7 @@ const Navbar = () => {
               <Mail size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/madhumitha-s-18f/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -54,7 +54,7 @@ const Navbar = () => {
               <Linkedin size={18} />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/smadhu1230"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -64,9 +64,8 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="xl:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -74,9 +73,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="xl:hidden mt-4 pb-4 animate-fade-in max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
@@ -92,10 +90,10 @@ const Navbar = () => {
                 <a href="mailto:12282madhu@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={18} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/madhumitha-s-18f/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin size={18} />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/smadhu1230" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github size={18} />
                 </a>
               </div>
