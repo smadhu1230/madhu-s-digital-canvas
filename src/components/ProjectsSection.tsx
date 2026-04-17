@@ -1,6 +1,7 @@
 import { ExternalLink, Github, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import liveMusicImage from "@/assets/project-live-music.png";
+import soilMoistureImage from "@/assets/project-soil-moisture.png";
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
     title: "Soil Moisture Sensor System",
     description:
       "IoT-based system to monitor soil moisture levels in real-time and enable smart irrigation for sustainable agriculture.",
-    image: "",
+    image: soilMoistureImage,
     tags: ["IoT", "Arduino", "Sensors", "Embedded"],
     liveUrl: "#",
     githubUrl: "#",
