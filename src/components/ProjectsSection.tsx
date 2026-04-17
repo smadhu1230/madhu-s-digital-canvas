@@ -1,5 +1,6 @@
 import { ExternalLink, Github, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import liveMusicImage from "@/assets/project-live-music.png";
 
 const projects = [
   {
@@ -7,7 +8,7 @@ const projects = [
     title: "Live Music Web Application",
     description:
       "Music streaming platform with secure authentication, media uploads via Cloudinary, and admin dashboard. Improved performance by 30% through optimization.",
-    image: "",
+    image: liveMusicImage,
     tags: ["React", "Firebase", "Tailwind CSS", "Cloudinary"],
     liveUrl: "#",
     githubUrl: "#",
