@@ -1,14 +1,18 @@
 import { Rocket, ImageIcon, Calendar } from "lucide-react";
+import oneyes from "@/assets/oneyes.jpg";
+import hackatronics from "@/assets/hackatronics.jpg";
 
 const hackathons = [
   {
     id: 1,
     title: "ONEYES Hackathon 2026",
+    image: oneyes,
     description: "Built innovative solutions for startup-focused challenges.",
   },
   {
     id: 2,
     title: "Hackatronics-2K25",
+    image: hackatronics,
     description: "Participated in electronics and software integration challenges.",
   },
 ];
