@@ -1,10 +1,15 @@
 import { Award, ImageIcon } from "lucide-react";
+import hdca from "@/assets/hdca.jpg";
+import java from "@/assets/java developer.jpg";
+import tcsion from "@/assets/tcsion.jpg";
+
 
 const certifications = [
   {
     id: 1,
     title: "Honours Diploma in Computer Application (HDCA)",
     issuer: "Computer Software College",
+    image: hdca,
     description:
       "Foundational knowledge in programming, databases, and office tools. Built a Bank Management System (C) and Flappy Bird Game (C++).",
   },
@@ -12,18 +17,21 @@ const certifications = [
     id: 2,
     title: "Java Developer Certification",
     issuer: "Infosys Springboard",
+    image: java,
     description: "Strong foundation in Java and Object-Oriented Programming concepts.",
   },
   {
     id: 3,
     title: "TCS iON Career Edge",
     issuer: "Tata Consultancy Services",
+    image: tcsion,
     description: "Enhanced employability skills, communication, and interview preparation.",
   },
   {
     id: 4,
     title: "Oracle Cloud Generative AI Professional",
     issuer: "Oracle",
+    image: 
     description: "Learned AI fundamentals and cloud concepts for generative AI applications.",
   },
   {
