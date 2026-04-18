@@ -23,18 +23,6 @@ const socialLinks = [
     href: "https://github.com/smadhu1230",
     label: "github.com/smadhu1230",
   },
-  {
-    name: "HackerRank",
-    icon: <Code size={20} />,
-    href: "https://www.hackerrank.com/profile/12282madhu",
-    label: "hackerrank.com/12282madhu",
-  },
-  {
-    name: "LeetCode",
-    icon: <ExternalLink size={20} />,
-    href: "https://leetcode.com/u/o9F2OPfHYH/",
-    label: "leetcode.com/u/o9F2OPfHYH",
-  },
 ];
 
 const ContactSection = () => {
