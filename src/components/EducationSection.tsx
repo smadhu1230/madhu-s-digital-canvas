@@ -4,12 +4,12 @@ const codingProfiles = [
   {
     name: "HackerRank",
     url: "https://www.hackerrank.com/profile/12282madhu",
-    handle: "@12282madhu",
+    handle: "@Madhumitha_Hackerank",
   },
   {
     name: "LeetCode",
     url: "https://leetcode.com/u/o9F2OPfHYH/",
-    handle: "@o9F2OPfHYH",
+    handle: "Madhumitha_Leetcode",
   },
 ];
 
