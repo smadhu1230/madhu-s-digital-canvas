@@ -1,4 +1,9 @@
 import { Trophy, ImageIcon } from "lucide-react";
+import projectexpo from "@/assets/projectexpo.jpg";
+import rem from "@/assets/rem.jpg";
+import iete from "@/assets/iete.jpg";
+import emerging from "@/assets/emerging.jpg";
+import beststudent from "@/assets/volunteeraward.jpg";
 
 const achievements = [
   {
@@ -6,30 +11,35 @@ const achievements = [
     title: "Best Project Award",
     event: "Circuit Lab Project Expo 2K24",
     description: "Developed Automatic Street Light System.",
+    image: projectexpo,
   },
   {
     id: 2,
     title: "Richard E. Merwin Scholarship",
     event: "IEEE Computer Society",
     description: "Awarded USD 1000 for academic excellence and IEEE volunteering.",
+    image: rem,
   },
   {
     id: 3,
     title: "ISF Best Student Volunteer Award 2025",
     event: "IETE Students Forum",
     description: "Recognized as the best student volunteer of 2025.",
+    image: iete,
   },
   {
     id: 4,
     title: "Emerging Student Volunteer Award 2025",
     event: "IEEE",
     description: "Acknowledgment for impactful early-career volunteering.",
+    image: emerging,
   },
   {
     id: 5,
     title: "Best Student Volunteer Award",
     event: "2024 & 2025",
     description: "Awarded two consecutive years for outstanding contributions.",
+    image: beststudent,
   },
 ];
 
