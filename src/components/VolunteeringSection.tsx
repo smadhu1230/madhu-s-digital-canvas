@@ -1,5 +1,6 @@
-import { Award, Crown, Users, Calendar, Star, Heart, Sparkles, ImageIcon } from "lucide-react";
+import { Award, Crown, Users, Calendar, Star, Heart, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+
 import rmc from "@/assets/rmc.jpg";
 import ctd from "@/assets/ctd.jpg";
 import sdgthon from "@/assets/sdgthon.jpg";
@@ -38,7 +39,6 @@ const leadershipRoles = [
   },
 ];
 
-// Highlighted volunteering with image placeholders
 const featuredVolunteering = [
   { id: 1, title: "IEEE Returning Mothers Conference 2025", image: rmc },
   { id: 2, title: "Design Team Co-Lead — Connecting the Dots 4.0", image: ctd },
@@ -49,7 +49,6 @@ const featuredVolunteering = [
 ];
 
 const volunteeringActivities = [
-  
   { id: 2, role: "Volunteer", event: "INSPIRE 2.0 (IEEE SPAx)", period: "Aug 2025" },
   { id: 3, role: "Graphic Designer", event: "IEEE MOVE India", period: "2025" },
   { id: 4, role: "Publicity Ambassador", event: "IEEE YESIST12 2025", period: "2025" },
@@ -66,17 +65,23 @@ const volunteeringActivities = [
 const VolunteeringSection = () => {
   return (
     <section id="volunteering" className="py-24 relative overflow-hidden">
+      
+      {/* Background Glow */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
+
+        {/* Header */}
         <div className="text-center mb-16">
           <p className="text-secondary font-medium mb-2 tracking-wider uppercase text-sm">
             Making an Impact
           </p>
+
           <h2 className="section-title">
             Leadership & <span className="text-primary">Volunteering</span>
           </h2>
+
           <p className="section-subtitle mx-auto mt-4">
             Demonstrating leadership and community impact through IEEE roles and initiatives.
           </p>
@@ -85,9 +90,7 @@ const VolunteeringSection = () => {
         {/* Leadership Roles */}
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8 justify-center">
-            <div className="p-2 bg-secondary/10 rounded-lg">
-              <Crown className="text-secondary" size={24} />
-            </div>
+            <Crown className="text-secondary" size={24} />
             <h3 className="text-2xl font-display font-semibold">IEEE Leadership Roles</h3>
           </div>
 
@@ -109,7 +112,9 @@ const VolunteeringSection = () => {
                   <Crown size={24} className="text-secondary" />
                 </div>
 
-                <h4 className="text-lg font-semibold text-gradient mb-2">{role.role}</h4>
+                <h4 className="text-lg font-display font-semibold text-gradient mb-2">
+                  {role.role}
+                </h4>
                 <p className="text-foreground font-medium text-sm mb-1">{role.organization}</p>
                 <p className="text-muted-foreground text-xs">{role.chapter}</p>
               </div>
@@ -117,12 +122,10 @@ const VolunteeringSection = () => {
           </div>
         </div>
 
-        {/* Featured Volunteering with Image Placeholders */}
+        {/* Featured Initiatives */}
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8 justify-center">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Star className="text-primary" size={24} />
-            </div>
+            <Star className="text-primary" size={24} />
             <h3 className="text-2xl font-display font-semibold">Featured Initiatives</h3>
           </div>
 
@@ -132,17 +135,23 @@ const VolunteeringSection = () => {
                 key={item.id}
                 className="group bg-card border border-border rounded-2xl overflow-hidden card-glow hover:border-primary/50 transition-all"
               >
-                <div className="relative h-44 bg-muted overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/15 to-secondary/15" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/60">
-                    <ImageIcon size={32} className="mb-1" />
-                    <span className="text-xs uppercase tracking-wider">Event Image</span>
-                  </div>
+                
+                {/* ✅ Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300" />
                 </div>
+
                 <div className="p-5">
                   <div className="flex items-start gap-2">
                     <Heart size={16} className="text-primary mt-1 shrink-0" />
-                    <h4 className="font-semibold leading-snug">{item.title}</h4>
+                    <h4 className="font-display font-semibold leading-snug">
+                      {item.title}
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -150,54 +159,34 @@ const VolunteeringSection = () => {
           </div>
         </div>
 
-        {/* All Volunteering Timeline */}
+        {/* Timeline */}
         <div>
           <div className="flex items-center gap-3 mb-8 justify-center">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Users className="text-primary" size={24} />
-            </div>
+            <Users className="text-primary" size={24} />
             <h3 className="text-2xl font-display font-semibold">All Volunteering Activities</h3>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary/30 transform md:-translate-x-1/2" />
-
-              {volunteeringActivities.map((activity, index) => (
-                <div
-                  key={activity.id}
-                  className={`relative mb-8 ${
-                    index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-auto"
-                  }`}
-                >
-                  <div className="absolute left-4 md:left-1/2 top-2 w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary border-2 border-background transform -translate-x-1/2 z-10 animate-pulse-glow" />
-
-                  <div
-                    className={`ml-12 md:ml-0 ${
-                      index % 2 === 0 ? "md:mr-10" : "md:ml-10"
-                    }`}
-                  >
-                    <div className="group bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 hover:border-primary/30 transition-all hover:bg-card">
-                      <div className={`flex items-center gap-2 mb-1 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                        <Calendar size={12} className="text-secondary" />
-                        <span className="text-xs text-secondary font-medium">{activity.period}</span>
-                      </div>
-
-                      <h4 className={`font-semibold text-foreground mb-1 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                        {activity.role}
-                      </h4>
-                      <p className={`text-sm text-muted-foreground ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                        {activity.event}
-                      </p>
-                    </div>
-                  </div>
+            {volunteeringActivities.map((activity) => (
+              <div key={activity.id} className="mb-6 p-4 border rounded-xl">
+                <div className="flex items-center gap-2 text-xs text-secondary mb-1">
+                  <Calendar size={12} />
+                  {activity.period}
                 </div>
-              ))}
-            </div>
+
+                <h4 className="font-display font-semibold">
+                  {activity.role}
+                </h4>
+
+                <p className="text-sm text-muted-foreground">
+                  {activity.event}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Impact Stats */}
+        {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
             { number: "4", label: "Leadership Roles", icon: <Crown size={20} /> },
@@ -212,11 +201,18 @@ const VolunteeringSection = () => {
               <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary">
                 {stat.icon}
               </div>
-              <div className="text-3xl font-display font-bold text-gradient mb-1">{stat.number}</div>
-              <div className="text-xs text-muted-foreground">{stat.label}</div>
+
+              <div className="text-3xl font-display font-bold text-gradient mb-1">
+                {stat.number}
+              </div>
+
+              <div className="text-xs text-muted-foreground">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
