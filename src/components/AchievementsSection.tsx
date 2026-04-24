@@ -3,7 +3,7 @@ import projectexpo from "@/assets/projectexpo.jpg";
 import rem from "@/assets/rem.jpg";
 import iete from "@/assets/iete.jpg";
 import emerging from "@/assets/emerging.jpg";
-import beststudent from "@/assets/volunteeraward.jpg";
+import beststudent from "@/assets/beststudent.jpg";
 
 const achievements = [
   {
@@ -39,7 +39,7 @@ const achievements = [
     title: "Best Student Volunteer Award",
     event: "2024 & 2025",
     description: "Awarded two consecutive years for outstanding contributions.",
-    image: beststudent,
+    img- beststudent,
   },
 ];
 
@@ -91,3 +91,4 @@ const AchievementsSection = () => {
 };
 
 export default AchievementsSection;
+
