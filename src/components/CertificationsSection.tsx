@@ -52,26 +52,32 @@ const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-24 bg-card/30">
       <div className="container mx-auto px-6">
+
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-secondary font-medium mb-2 tracking-wider uppercase text-sm">
             Continuous Learning
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+
+          {/* ✅ SAME FONT AS PROJECTS */}
+          <h2 className="section-title">
             Certifications &{" "}
             <span className="text-primary">Courses</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-sm md:text-base">
+
+          <p className="section-subtitle mx-auto mt-4">
             Completed certifications in software development, AI, and emerging technologies.
           </p>
         </div>
-        {/* Cards Grid */}
+
+        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:border-primary/40 transition-all duration-300"
+              className="group bg-card border border-border rounded-2xl overflow-hidden card-glow hover:border-primary/40 transition-all duration-300"
             >
+              
               {/* Image */}
               <div className="relative h-44 overflow-hidden">
                 <img
@@ -79,9 +85,9 @@ const CertificationsSection = () => {
                   alt={cert.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300" />
               </div>
+
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-start gap-3 mb-3">
@@ -89,24 +95,31 @@ const CertificationsSection = () => {
                   <div className="p-2 bg-primary/10 rounded-lg text-primary">
                     <Award size={20} />
                   </div>
+
                   <div>
-                    <h3 className="font-semibold leading-snug text-base">
+                    {/* ✅ SAME FONT STYLE */}
+                    <h3 className="text-lg font-display font-semibold leading-snug group-hover:text-primary transition-colors">
                       {cert.title}
                     </h3>
+
                     <p className="text-secondary text-xs mt-1">
                       {cert.issuer}
                     </p>
                   </div>
                 </div>
+
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {cert.description}
                 </p>
               </div>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
+
 export default CertificationsSection;
