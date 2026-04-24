@@ -49,14 +49,14 @@ const featuredVolunteering = [
 ];
 
 const volunteeringActivities = [
-  { id: 2, role: "Volunteer", event: "INSPIRE 2.0 (IEEE SPAx)", period: "Aug 2025" },
+  { id: 2, role: "Coordinator", event: "INSPIRE 2.0 (IEEE SPAx)", period: "Aug 2025" },
   { id: 3, role: "Graphic Designer", event: "IEEE MOVE India", period: "2025" },
   { id: 4, role: "Publicity Ambassador", event: "IEEE YESIST12 2025", period: "2025" },
   { id: 5, role: "Coordinator", event: "SheLEADS STEM Initiative (500+ students)", period: "2025" },
   { id: 6, role: "Co-Lead, Design Team", event: "Connecting the Dots 4.0", period: "Sep – Oct 2025" },
   { id: 7, role: "Design Member", event: "IDEATHON & PITCHFEST", period: "2025" },
-  { id: 8, role: "IEEE Day Ambassador", event: "Panimalar Engineering College", period: "Jul – Oct 2025" },
-  { id: 9, role: "IEEEXTREME 19.0 Ambassador", event: "Panimalar Engineering College", period: "Jun – Oct 2025" },
+  { id: 8, role: "Coordinator", event: "Tech for Society : SDG Awareness and Innovation Challenge for Students", period: "October 30 & 31, 2025" },
+  { id: 9, role: "Organiser Lead", event: "IEEE CASS TECHFEST Three Days Workshop on Mastering PCB - Advanced Design & Fabrication Techniques", period: "December 22 - 24, 2025" },
   { id: 10, role: "Volunteer", event: "IEEE Madras Section", period: "Jul 2025 – Present" },
   { id: 11, role: "Special Track Design Lead", event: "IEEE YESIST12 2026", period: "Dec 2025 – Present" },
   { id: 12, role: "Coordinator", event: "SDGthon 2K26 — 24-hour SDG Hackathon", period: "2026" },
