@@ -1,7 +1,7 @@
 import { Trophy } from "lucide-react";
 import projectexpo from "@/assets/projectexpo.jpg";
 import rem from "@/assets/rem.jpg";
-import iete from "@/assets/iete.jpg";
+import iete from "@/assets/iete.jpeg";
 import emerging from "@/assets/emerging.jpg";
 import beststudent from "@/assets/beststudent.jpg";
 
