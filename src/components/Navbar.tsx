@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2">
             <span className="text-2xl font-display font-bold">
-              Madhumitha<span className="text-primary">S</span>
+              Madhu<span className="text-primary">mitha</span>
             </span>
           </a>
 
