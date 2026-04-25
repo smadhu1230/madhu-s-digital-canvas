@@ -17,24 +17,21 @@ const AboutSection = () => {
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              <span className="text-foreground font-medium">Madhumitha Saravanan</span> is an
+              <span className="text-foreground font-medium">I am </span> an
               Electronics and Communication Engineering undergraduate at
               <span className="text-primary"> Panimalar Engineering College, Chennai</span>
               <span className="text-secondary"> (2023–2027)</span>.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              She is passionate about software development and the IT field, with a strong focus on
-              building intuitive and real-world applications. She combines problem-solving skills with
-              a creative mindset to design user-friendly digital experiences.
+              I’m passionate about software development and the IT field, with a strong interest in building intuitive, real-world applications. I enjoy combining problem-solving with creativity to design user-friendly digital experiences.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              A continuous learner who actively explores new technologies and thrives in collaborative
-              environments.
+              I’m a continuous learner who actively explores new technologies and enjoys working in collaborative environments.
             </p>
 
             {/* Quick facts */}
             <div className="grid grid-cols-2 gap-4 pt-6">
-              <QuickFact icon={<GraduationCap size={20} />} label="ECE Student" value="Class of 2027" />
+              <QuickFact icon={<GraduationCap size={20} />} label="Passion" value="Graphic Designer" />
               <QuickFact icon={<Sparkles size={20} />} label="Focus" value="Software Development" />
               <QuickFact icon={<Music size={20} />} label="Hobby" value="Music Enthusiast" />
               <QuickFact icon={<Sparkles size={20} />} label="Location" value="Chennai, India" />
@@ -55,7 +52,7 @@ const AboutSection = () => {
               <TimelineItem
                 year="2021 - 2023"
                 title="Higher Secondary Education"
-                institution="Chennai, Tamil Nadu"
+                institution="Maharishi Vidya Mandir, Hosur, Tamil Nadu"
                 description="Completed HSC with strong foundation in Mathematics and Science."
               />
             </div>
