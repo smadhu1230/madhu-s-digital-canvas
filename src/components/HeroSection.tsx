@@ -25,7 +25,7 @@ const HeroSection = () => {
               </p>
 
               <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 leading-tight">
-                Hello 
+                Hello I'm
                 <br />
                 <span className="text-primary">MADHUMITHA S</span>
               </h1>
@@ -36,13 +36,9 @@ const HeroSection = () => {
             </div>
 
             <div className="animate-fade-up animation-delay-200">
-              <p className="text-foreground/90 max-w-lg mb-3 leading-relaxed font-medium">
-                Building scalable, user-focused digital experiences with clean code and creative design.
-              </p>
 
               <p className="text-muted-foreground max-w-lg mb-8 leading-relaxed">
-                Passionate about software development and creating impactful digital solutions that
-                blend problem-solving with creativity.
+                Passionate about building scalable software and exploring AI-driven solutions that create smarter, more meaningful user experiences.
               </p>
             </div>
 
