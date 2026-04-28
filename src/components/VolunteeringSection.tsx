@@ -189,7 +189,7 @@ const VolunteeringSection = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { number: "880+", label: "Leadership Roles", icon: <Crown size={20} /> },
+            { number: "80+", label: "Leadership Roles", icon: <Crown size={20} /> },
             { number: "200+", label: "Events Organised and Coordinated", icon: <Heart size={20} /> },
             { number: "50+", label: "Awards & Scholarships", icon: <Award size={20} /> },
             { number: "3000+", label: "Students Impacted", icon: <Sparkles size={20} /> },
