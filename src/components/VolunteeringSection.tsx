@@ -189,10 +189,10 @@ const VolunteeringSection = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { number: "4", label: "Leadership Roles", icon: <Crown size={20} /> },
-            { number: "13+", label: "Volunteer Activities", icon: <Heart size={20} /> },
-            { number: "5", label: "Awards & Scholarships", icon: <Award size={20} /> },
-            { number: "500+", label: "Students Impacted", icon: <Sparkles size={20} /> },
+            { number: "880+", label: "Leadership Roles", icon: <Crown size={20} /> },
+            { number: "200+", label: "Events Organised and Coordinated", icon: <Heart size={20} /> },
+            { number: "50+", label: "Awards & Scholarships", icon: <Award size={20} /> },
+            { number: "3000+", label: "Students Impacted", icon: <Sparkles size={20} /> },
           ].map((stat, index) => (
             <div
               key={index}
