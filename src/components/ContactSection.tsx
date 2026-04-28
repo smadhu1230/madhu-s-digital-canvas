@@ -75,7 +75,6 @@ const ContactSection = () => {
               </p>
             </div>
 
-            {/* Social Links */}
             <div className="space-y-4">
               {socialLinks.map((link) => (
                 <a
@@ -108,7 +107,9 @@ const ContactSection = () => {
             <form
               name="contact"
               method="POST"
+              action="/"
               data-netlify="true"
+              netlify
               onSubmit={handleSubmit}
               className="space-y-6"
             >
@@ -167,8 +168,15 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Hidden fallback form for Netlify */}
-        <form name="contact" data-netlify="true" hidden>
+        {/* 🔥 Hidden fallback form (CRITICAL for Netlify detection) */}
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify
+          hidden
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="name" />
           <input type="email" name="email" />
           <textarea name="message"></textarea>
