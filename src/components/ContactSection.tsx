@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Send, ExternalLink, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,10 +32,20 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+
+    const form = e.target as HTMLFormElement;
+    const formDataObj = new FormData(form);
+
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formDataObj as any).toString(),
+    });
+
+    alert("Message sent!");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -94,38 +104,56 @@ const ContactSection = () => {
             <h3 className="text-xl font-display font-semibold mb-6">
               Send a Message
             </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              {/* Required hidden input */}
+              <input type="hidden" name="form-name" value="contact" />
+
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
                 <Input
+                  name="name"
                   type="text"
                   placeholder="Your name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   className="bg-background border-border"
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
                 <Input
+                  name="email"
                   type="email"
                   placeholder="your@email.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="bg-background border-border"
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <Textarea
+                  name="message"
                   placeholder="Tell me about your project..."
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   className="bg-background border-border min-h-[150px]"
                   required
                 />
@@ -138,6 +166,13 @@ const ContactSection = () => {
             </form>
           </div>
         </div>
+
+        {/* Hidden fallback form for Netlify */}
+        <form name="contact" data-netlify="true" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
       </div>
     </section>
   );
